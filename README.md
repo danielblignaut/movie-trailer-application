@@ -8,16 +8,17 @@ The server is powered by **flask** whilst the client is powered by **Angular.JS*
 
 To launch the project:
     
-    1. **SSH** into the vagrant machine & **CD** into the project directory
-    2. Execute **python fresh_tomatoes.py**
-    3. Open your browser & navigate to **0.0.0.0:8000** (whatever the forwarded port and URL are. They should be the adjacent)
+1. **SSH** into the vagrant machine & **CD** into the project directory
+2. Execute **python fresh_tomatoes.py**
+3. Open your browser & navigate to **0.0.0.0:8000** (whatever the forwarded port and URL are. They should be the adjacent)
 
 The program executes as follows:
 
-    1. Set some constants (Path to index.html and the path to the database).
-    2. Instantiate the Entertainment Center. Here, the database is read and the movie objects are subsequently instantiated.
-    3. Start the web server on port 8000 (forwarded via vagrant)
-    4. server your web content (Only GET requests)
+1. Set some constants (Path to index.html and the path to the database).
+2. Instantiate the Entertainment Center. Here, the database is read and the movie objects are subsequently instantiated.
+3. Start the web server on port 8000 (forwarded via vagrant)
+E37: No write since last change (add ! to override)
+4. server your web content (Only GET requests)
 
 #The Client
 
