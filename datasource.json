@@ -1,0 +1,106 @@
+{
+	"movies" :  [{
+		"title" : "Ironman",
+		"storyline" : "Iron Man (Tony Stark) is a fictional superhero appearing in American comic books published by Marvel Comics, as well as its associated media. The character was created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. He made his first appearance in Tales of Suspense #39 (cover dated March 1963).",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg",
+		"youtube_trailer" : "8hYlB38asDY",
+		"rating" : 3,
+		"restriction" : "G"
+	},
+	{
+		"title" : "Ironman 2",
+		"storyline" : "Iron Man 2 is a 2010 American superhero film based on the Marvel Comics character Iron Man, produced by Marvel Studios and distributed by Paramount Pictures.1 It is the sequel to 2008's Iron Man, and is the third installment in the Marvel Cinematic Universe. Directed by Jon Favreau and written by Justin Theroux, the film stars Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson, Sam Rockwell, Mickey Rourke, and Samuel L. Jackson. Six months after the events of Iron Man, Tony Stark is resisting calls by the United States government to hand over the Iron Man technology while also combating his declining health from the arc reactor in his chest. Meanwhile, rogue Russian scientist Ivan Vanko has developed the same technology and built weapons of his own in order to pursue a vendetta against the Stark family, in the process joining forces with Stark's business rival, Justin Hammer.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/e/ed/Iron_Man_2_poster.jpg",
+		"youtube_trailer" : "FNQowwwwYa0",
+		"rating" : 6,
+		"restriction" : "PG"
+	},
+	{
+		"title" : "Ironman 3",
+		"storyline" : "Iron Man 3 (stylized onscreen as Iron Man Three) is a 2013 superhero film featuring the Marvel Comics character Iron Man, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.1 It is the sequel to 2008's Iron Man and 2010's Iron Man 2, and the seventh installment in the Marvel Cinematic Universe. Shane Black directed a screenplay he co-wrote with Drew Pearce, which uses concepts from the Extremis story arc by Warren Ellis. The film stars Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce, Rebecca Hall, Stephanie Szostak, James Badge Dale, Jon Favreau, and Ben Kingsley. In Iron Man 3, Tony Stark tries to recover from posttraumatic stress disorder caused by the events of The Avengers, while investigating a terrorist organization led by the mysterious Mandarin.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/d/d5/Iron_Man_3_theatrical_poster.jpg",
+		"youtube_trailer" : "Ke1Y3P9D0Bc",
+		"rating" : 3,
+		"restriction" : "G"
+	},
+	{
+		"title" : "Batman Begins",
+		"storyline" : "Batman Begins is a 2005 superhero film based on the fictional DC Comics character Batman, co-written and directed by Christopher Nolan and starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Tom Wilkinson, Rutger Hauer, with Ken Watanabe and Morgan Freeman. The film reboots the Batman film series, telling the origin story of the the title character (Bale), from his alter ego Bruce Wayne's initial fear of bats, the death of his parents, his journey to become Batman, and his fight to stop Ra's al Ghul (Neeson) and the terrifying Scarecrow (Murphy) from vaporizing the tainted water supply of Gotham City with a fear-inducing drug causing mass hysteria and violence, destroying city in the process. It draws inspiration from classic comic book storylines such as The Man Who Falls, Batman: Year One, and Batman: The Long Halloween.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg",
+		"youtube_trailer" : "neY2xVmOfUM",
+		"rating" : -1,
+		"restriction" : "R"
+	},
+	{
+		"title" : "The Dark Knight",
+		"storyline" : "The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second part of Nolan's Batman film series and a sequel to 2005's Batman Begins. Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon and Morgan Freeman as Lucius Fox. The film introduces the character of Harvey Dent (Aaron Eckhart), Gotham's newly elected District Attorney and the consort of Bruce Wayne's childhood friend Rachel Dawes (Maggie Gyllenhaal replacing Katie Holmes from the first film), who joins Batman and the police in combating the new rising threat of a criminal mastermind known as The \"Joker\" (Heath Ledger).",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg",
+		"youtube_trailer" : "EXeTwQWrcwY",
+		"rating" : 4,
+		"restriction" : "PG-13"
+	},
+	{
+		"title" : "The Dark Knight Rises",
+		"storyline" : "The Dark Knight Rises is a 2012 British-American epic superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/8/83/Dark_knight_rises_poster.jpg",
+		"youtube_trailer" : "GokKUqLcvD8",
+		"rating" : 1,
+		"restriction" : "GR"
+	},
+	{
+		"title" : "Man Of Steel",
+		"storyline" : "Man of Steel is a 2013 American superhero film based on the DC Comics character Superman, co-produced by Legendary Pictures and Syncopy Films, and distributed by Warner Bros. Pictures. It is the first installment in the DC Extended Universe.[6] Directed by Zack Snyder and written by David S. Goyer, the film stars Henry Cavill, Amy Adams, Michael Shannon, Diane Lane, Kevin Costner, Laurence Fishburne, Antje Traue, Ayelet Zurer, Christopher Meloni and Russell Crowe. Man of Steel is a reboot of the Superman film series that portrays the character's origin story.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/8/85/ManofSteelFinalPoster.jpg",
+		"youtube_trailer" : "T6DJcgm3wNY",
+		"rating" : 2,
+		"restriction" : "G"
+	},
+	{
+		"title" : "Dawn Of Justice",
+		"storyline" : "Batman v Superman: Dawn of Justice is an upcoming American superhero film featuring the DC Comics characters Batman and Superman, distributed by Warner Bros. Pictures. It is intended to be the follow-up to 2013's Man of Steel and the second installment in the DC Extended Universe. The film is directed by Zack Snyder, with a screenplay written by Chris Terrio and David S. Goyer. The cast will include Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter, and Gal Gadot. Batman v Superman: Dawn of Justice will be the first live-action film to feature both Batman and Superman, as well as the first theatrical film to feature a live-action portrayal of Wonder Woman.",
+		"image_poster" : "http://d.ibtimes.co.uk/en/full/1402633/batman-v-superman.jpg",
+		"youtube_trailer" : "0WWzgGyAH6Y",
+		"rating" : 5,
+		"restriction" : "R"
+	},
+	{
+		"title" : "Superman Returns",
+		"storyline" : "Superman Returns is a 2006 American superhero film directed and produced by Bryan Singer. It is based on the DC Comics character Superman and serves as an homage sequel to the motion pictures Superman (1978) and Superman II (1980),[1][2] ignoring the events of Superman III (1983) and Superman IV (1987).[1] The film stars Brandon Routh as Clark Kent/Superman, Kate Bosworth as Lois Lane, Kevin Spacey as Lex Luthor, with James Marsden, Frank Langella, and Parker Posey. The film tells the story of the title character returning to Earth after a five-year absence. He finds that his love interest Lois Lane has moved on with her life, and that his archenemy Lex Luthor is plotting a scheme that will destroy him and the world.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/1/10/Superman_Returns.jpg",
+		"youtube_trailer" : "bRqAUqAFhNw",
+		"rating" : 1,
+		"restriction" : "R-19"
+	},
+	{
+		"title" : "Avengers: Age of Ultron",
+		"storyline" : "Avengers: Age of Ultron is a 2015 American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is the sequel to 2012's The Avengers and the eleventh installment in the Marvel Cinematic Universe (MCU). The film was written and directed by Joss Whedon and features an ensemble cast that includes Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans, Scarlett Johansson, Jeremy Renner, Don Cheadle, Aaron Taylor-Johnson, Elizabeth Olsen, Paul Bettany, Cobie Smulders, Anthony Mackie, Hayley Atwell, Idris Elba, Stellan Skarsgård, James Spader, and Samuel L. Jackson. In Avengers: Age of Ultron, the Avengers must work together to defeat Ultron, a mechanical artificial intelligence bent on human extinction.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/1/1b/Avengers_Age_of_Ultron.jpg",
+		"youtube_trailer" : "JAUoeqvedMo",
+		"rating" : 4,
+		"restriction" : "PG-13"
+	},
+	{
+		"title" : "Marvel Avengers",
+		"storyline" : "Marvel's The Avengers[4] (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland),[1][5] or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.1 It is the sixth installment in the Marvel Cinematic Universe. The film was written and directed by Joss Whedon and features an ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Tom Hiddleston, Clark Gregg, Cobie Smulders, Stellan Skarsgård, and Samuel L. Jackson. In the film, Nick Fury, director of the peacekeeping organization S.H.I.E.L.D., recruits Iron Man, Captain America, the Hulk, and Thor to form a team that must stop Thor's brother Loki from subjugating Earth.",
+		"image_poster" : "https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg",
+		"youtube_trailer" : "eOrNdBpGMv8",
+		"rating" : 9,
+		"restriction" : "G"
+	},
+	{
+		"title" : "X-Men Apocalypse",
+		"storyline" : "X-Men: Apocalypse is an upcoming American superhero film based on the X-Men characters that appear in Marvel Comics. It is intended to be the sequel to 2014's X-Men: Days of Future Past and the ninth installment in the X-Men film series. Directed by Bryan Singer, with a screenplay by Simon Kinberg from a story conceived by Dan Harris, Michael Dougherty, Kinberg, and Singer, the film features an ensemble cast starring James McAvoy, Michael Fassbender, Jennifer Lawrence, Oscar Isaac, Nicholas Hoult, Rose Byrne, Olivia Munn, Evan Peters, Kodi Smit-McPhee, Sophie Turner, Tye Sheridan, Alexandra Shipp, Lucas Till, Josh Helman, Lana Condor, and Ben Hardy.",
+		"image_poster" : "http://static2.hypable.com/wp-content/uploads/2014/01/x-men-days-of-future-past-new-poster-hd.jpg",
+		"youtube_trailer" : "g53Mh4gUEac",
+		"rating" : 1,
+		"restriction" : "PG"
+	},
+	{
+		"title" : "X-Men",
+		"storyline" : "The X-Men film series consists of superhero films based on the Marvel Comics superhero team of the same name. 20th Century Fox obtained the film rights to the characters in 1994, and after numerous drafts, Bryan Singer was hired to direct X-Men (2000) and its sequel, X2 (2003). Singer left the potential third and fourth films, leaving Brett Ratner to direct X-Men: The Last Stand (2006).\n\nAfter each film earned higher box-office grosses than its predecessor, several spin-off films were released. X-Men Origins: Wolverine (2009), directed by Gavin Hood, features Wolverine's origin story. X-Men: First Class (2011), directed by Matthew Vaughn, focuses on the origins of Professor X and Magneto. The Wolverine (2013), directed by James Mangold, follows Wolverine after the events of The Last Stand. The seventh film, X-Men: Days of Future Past (2014), featured the return of the original trilogy cast and Singer as director, serving as a sequel to both X-Men: The Last Stand and X-Men: First Class.",
+		"image_poster" : "http://cdn.bleedingcool.net/wp-content/uploads/2014/06/x-men-1-poster.jpg",
+		"youtube_trailer" : "nbNcULQFojc",
+		"rating" : 5.5,
+		"restriction" : "PG"
+	}]
+}

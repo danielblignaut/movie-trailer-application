@@ -1,0 +1,388 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Showcase</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- include bootstrap and font awesome for the stars -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <!-- apply some custom CSS -->
+    <style>
+      [ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}
+
+      .browsehappy {
+        margin: 0.2em 0;
+        background: #ccc;
+        color: #000;
+        padding: 0.2em 0;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      /* Responsive: Portrait tablets and up */
+      @media screen and (min-width: 768px) {
+        .container {
+          max-width: 730px;
+        }
+
+        /* Remove the padding we set earlier */
+        .header,
+        .marketing,
+        .footer {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        /* Space out the masthead */
+        .header {
+          margin-bottom: 30px;
+        }
+        /* Remove the bottom border on the jumbotron for visual effect */
+        .jumbotron {
+          border-bottom: 0;
+        }
+      }
+
+      .thumbnail .caption, .thumbnail .caption table, .thumbnail .caption table tr {
+        width: 100%;
+      }
+
+      .thumbnail .btn {
+          width:48%;
+        }
+
+      h3 {
+        text-align: center;
+      }
+
+      .thumbnail .caption table tr td:first-child {
+        width: 40%;
+      }
+
+      .thumbnail .caption table tr td:last-child {
+        width: 60%;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .restriction b {
+        float: right;
+      }
+
+      .loader img {
+        width: 100%;
+        height: auto;
+      }
+
+      .loader h1 {
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+  <body ng-app="movieApp" >
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- star of the header section -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">Movies</a>
+          </div><!-- /.navbar-header -->
+
+        </div><!-- /.container -->
+      </div><!-- /.navbar -->
+    </div><!-- /.header -->
+
+    <!-- start of the body of the movie section / main content -->
+    <div class="container" ng-controller="MainCtrl"> <!-- attach our controller here -->
+
+      <!--show some loading content whilst we wait... -->
+      <div ng-hide="loaded" class="loader">
+        <img src="http://38.media.tumblr.com/tumblr_mbarijfhp91ri9y8bo1_400.gif" alt="loading..." />
+        <hr>
+        <h1>Loading...</h1>
+      </div><!-- ./loader -->
+
+      <div  class="row" ng-repeat="(key, row) in movieRows" ng-cloak> <!--perform the first ng-repeat of a 2D array (splits movies into rows and columns for bootsrap) -->
+
+        <div class="col-sm-4" ng-repeat="(key, movie) in row"> <!-- perform the 2nd ng-repeat, now we can show the individual movie -->
+
+          <div class="thumbnail" ng-show="loaded"><!-- the thumbnail container for the movie -->
+            <img ng-src="{{ movie.image_poster }}" alt="{{ movie.title }}"><!-- fetch the movie poster -->
+            <div class="caption">
+              
+              <h3 class="text-center">{{ movie.title }}</h3><!-- show the title -->
+              
+              <hr>
+
+              <table>
+                <tr>
+                  <td>
+                    <!-- if the rating is valid, loop through how big it is and show the necessary stars -->
+                    <i ng-show="movie.valid_rating()" class="fa fa-star" ng-repeat="n in [] | range:movie.rating"></i> 
+
+                    <!-- if the rating isn't valid, dont show stars, show N/A -->
+                    <p ng-hide="movie.valid_rating()">N/A</p>
+                  </td>
+
+                  <td class="restriction"><b>{{movie.restriction }}</b></td><!-- show the movie restriction -->
+                </tr>
+              </table>
+
+              <hr>
+
+              <p>
+                <!-- create a button that calls the showTrailer function in our controller with the youtube trailer link -->
+                <a ng-click="showTrailer(movie.youtube_trailer)" class=" pull-left btn btn-primary" role="button">Trailer</a> 
+                <!-- create a button thaat calls the showStoryline function in our controller with the storyline copy. -->
+                <a ng-click="showStoryline(movie.storyline)"  class="pull-right btn btn-default" role="button">Storyline</a>
+
+                <div class="clearfix"></div>
+
+              </p>
+            </div><!-- /.caption -->
+          </div><!-- /.thumbnail -->
+
+        </div><!-- /.col-sm-4 (ng-repeat) -->
+
+      </div><!-- /.row (ng-repeat) -->
+
+      <!--use this modal to attach trailers and storylines -->
+      <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">
+                <!-- inject whatever modal content here in js using the modal service -->
+              </h4>
+            </div>
+            <div class="modal-body">
+              <!-- inject whatever modal content here in js using the modal service -->
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    </div><!-- /.container -->
+
+
+    <!-- include all the necessary scripts.... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+
+
+    <!-- below is the start of our full angular application -->    
+    <script type="text/javascript">
+      angular
+      /*
+        specify the name of our app
+      */
+      .module('movieApp', [])
+      /*
+        Create a range filter to help do an ng-repeat for the stars / rating. 
+        The below allows us to loop up until a specific number, sort of like a while loop for ng-repeat
+      */
+      .filter('range', function() {
+        return function(input, total) {
+          total = parseInt(total);
+          for (var i=0; i<total; i++) {
+            input.push(i);
+          }
+
+          return input;
+        };
+      })
+      /*
+        Create a service to handle all DOM interaction with our 1 modal. Also ensures that due to the singleton
+        pattern of your service, that we only every manipulate the 1 modal in the DOM
+      */
+      .service('modalService', function () {
+
+        //show the modal
+        this.show = function() {
+          $('#modal').modal('show');
+        };
+
+        //hide the modal
+        this.hide = function() {
+          $('#modal').modal('hide');
+        };
+
+        //set the title of the modal
+        this.setTitle = function(title) {
+          $('#modal').find('.modal-title').html(title);
+        };
+
+        //set the content of the modal
+        this.setContent = function(content) {
+          $('#modal').find('.modal-body').html(content);
+        };
+      })
+      /*
+        Create a factory that returns our movie model with a function called valid rating.
+        The below style allows us to easily add methods to our model as seen by the valid rating method below
+      */
+      .factory('movieFactory', function () {
+
+        //a constructor (Javascripts version... sort of)
+        function Movie(title, storyline, poster, trailer, rating, restriction) {
+          this.title = title;
+          this.storyline = storyline;
+          this.youtube_trailer = trailer;
+          this.image_poster = poster;
+          this.rating = rating;
+          this.restriction = restriction;
+        }
+
+        //a simple method that check if the rating is a valid one and if angular should therefore display the stars
+        //this is used in conjunction with ng-show & ng-hide
+        Movie.prototype.valid_rating = function() {
+         
+          if(this.rating === 'N/A') {
+            return false;
+          }
+          else {
+            return true;
+          }
+        };
+
+        return Movie;
+      })
+      /*
+        The only controller in our app which is responsible for:
+        1. Querying the server
+        2. Converting the returned JSON objects in to javascript objects (Movies) stored in an array
+        3. For Splicing up the array into 3's to make it easy to display in Angular using 2 ng-repeats nested
+
+        NB. All of the above is done Asynchronously using promises.
+
+        It is also responsible for:
+
+        a. fetching the movie count... Could be useful for statistics or pagination
+        b. Showing a movie's storyline
+        c. Showing a movie's trailer
+      */
+      .controller('MainCtrl', function ($scope, $q, $http, movieFactory, modalService) {
+        $scope.movieRows = [];
+        $scope.count = 0;
+        $scope.loaded = false;
+
+        /**
+          Both show trailer and show storyline interact with the modal service. They are responsible for hiding the modal,
+          setting the modals title and displaying their respective content. The take the youtube video ID and storyline text
+          as their respective parameters
+        **/
+        $scope.showTrailer = function(link) {
+          modalService.hide();
+          modalService.setTitle('Trailer');
+          modalService.setContent('<iframe width="100%" height="315" src="https://www.youtube.com/embed/' + link +'" frameborder="0" allowfullscreen></iframe>');
+          modalService.show();
+        };
+
+        $scope.showStoryline = function(text) {
+          modalService.hide();
+          modalService.setTitle('Storyline');
+          modalService.setContent('<p>' + text + '</p>');
+          modalService.show();
+        };
+
+        /*
+          the below function is responsible for promisifying a foreach loop. This loop is responsible
+          for converting the plain javascript objects fetched from the server and turning them into movie objects.
+          This is done to allow any custom processing or other functionality a movie should have, 
+          be possible (i.e. rate a movie, etc.)
+        */
+        this.convertToMovies = function(data) {
+          var promises = [];
+
+          if(typeof data === 'undefined') {
+            throw new Error("The JSON object can't be undefined");
+          };
+
+          angular.forEach(data.data.movies, function(value, key) {
+            var d = $q.defer();
+
+            d.resolve(new movieFactory(value.title, value.storyline, value.image_poster, value.youtube_trailer, value.rating, value.restriction));
+
+            promises.push(d.promise);
+          });
+
+          return $q.all(promises);
+        }
+
+        /*
+          the below function is responsible for promisifying a while loop. The function takes in the array of movies,
+          returned from the convertToMovies function, and then splits the array into "rows" of 3. So there will eventuall
+          be a 2 dimensional array. This makes the ng-repeat function simpler for creating rows with html wrapped around
+          each row for styling.
+        */
+        this.convertToRows = function(movies) {
+          var promises = [];
+
+          if(typeof movies === 'undefined') {
+            throw new Error("Movies can't be undefined");
+          }
+
+          while(movies.length) {
+            var d = $q.defer();
+
+            d.resolve(movies.splice(0, 3));
+
+            promises.push(d.promise);
+          }
+
+          return $q.all(promises);
+        }
+
+        //begin the promise chain to fetch all movies from the server and eventually convert them to rows
+        $http.get('http://0.0.0.0:8000/api/v1/movies')
+      .then(this.convertToMovies)
+      .then(this.convertToRows)
+      .then(function(val) {
+        $scope.movieRows = val;
+        $scope.loaded = true;
+
+        console.log('Movie Rows (split into 3\'s)');
+        console.log($scope.movieRows);
+      }, console.log);
+      
+      //begin the promise chain to fetch the count of all movies form the server. may become handy one day.
+      $http.get('http://0.0.0.0:8000/api/v1/count')
+      .then(function(val) {
+        console.log(val);
+        if(typeof val === 'undefined') {
+          throw new Error("Count could not be fetched");
+        }
+
+        $scope.count =  parseInt(val.data.count);
+
+        console.log("movies count:");
+        console.log($scope.count);
+      }, console.log);
+      
+      });
+    </script>
+  </body>
+</html>
